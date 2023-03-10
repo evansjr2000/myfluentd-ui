@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     libxslt1-dev \
     net-tools \
     emacs \
+    netcat \
     ruby-dev \
  && rm -rf /var/lib/apt/lists/*
 
