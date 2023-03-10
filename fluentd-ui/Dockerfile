@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     net-tools \
     emacs \
     ruby-dev \
+    firefox-esr \
  && rm -rf /var/lib/apt/lists/*
 
 RUN gem install fluentd-ui
