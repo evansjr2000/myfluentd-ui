@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     libxml2-dev \
     libxslt1-dev \
+    net-tools \
+    emacs \
     ruby-dev \
  && rm -rf /var/lib/apt/lists/*
 
@@ -16,4 +18,4 @@ RUN gem install fluentd-ui
 
 EXPOSE 9292
 
-ENTRYPOINT [ "fluentd-ui", "start" ]
+# ENTRYPOINT [ "fluentd-ui", "start", "--daemonize" ]
