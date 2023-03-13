@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-export VERS="v0.4"
+export VERS="v0.4.1"
 
 
 # docker build -t fluent/fluentd-ui:1.0.0 .
@@ -11,7 +11,7 @@ docker run -it --name myfluentd-ui  \
        -v /var/log:/var/log2 \
        -v `pwd`/tmp/fluentd:/etc/fluentd \
        -e THOR_SILENCE_DEPRECATION=True \
-       evansjr/myfluentd-ui:${VERS}
+       evansjr/myfluentd-ui:${VERS} /bin/bash
 
 
 

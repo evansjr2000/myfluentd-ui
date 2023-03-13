@@ -22,4 +22,4 @@ RUN gem install fluentd-ui
 
 EXPOSE 9292
 
-ENTRYPOINT [ "fluentd-ui", "start" ]
+# ENTRYPOINT [ "fluentd-ui", "start" ]
