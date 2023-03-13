@@ -1,4 +1,4 @@
-FROM ruby:2.7.7
+FROM ruby:2.6
 
 LABEL maintainer="Fluentd developers <fluentd@googlegroups.com>"
 LABEL description="fluentd-ui docker image"
@@ -16,8 +16,10 @@ RUN apt-get update && apt-get install -y \
     firefox-esr \
  && rm -rf /var/lib/apt/lists/*
 
+RUN gem install bundler:2.0.2
+RUN gem install nokogiri -v 1.13.10
 RUN gem install fluentd-ui
 
 EXPOSE 9292
 
-# ENTRYPOINT [ "fluentd-ui", "start", "--daemonize" ]
+ENTRYPOINT [ "fluentd-ui", "start" ]
